@@ -1,0 +1,449 @@
+/* Globalne style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #00fff0 #111;
+}
+
+/* Customowy pasek przewijania */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #111;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #00fff0;
+    border-radius: 10px;
+}
+
+/* Globalne style ładowania */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Loader z neonowym efektem */
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top: 5px solid #00fff0;
+    animation: spin 1s linear infinite, pulse 1.5s ease-in-out infinite;
+}
+
+/* Neonowy efekt wokół koła */
+.loader::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 240, 0.3), rgba(0, 255, 240, 0));
+    animation: glow 1.5s infinite ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+/* Neonowy efekt obracającego się koła */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efekt pulsowania */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+}
+
+/* Glow efekt na tle */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #00fff0, 0 0 40px #00fff0, 0 0 60px #00fff0;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0;
+    }
+}
+
+/* Po załadowaniu strony */
+body.loaded #loading {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Nagłówek */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #111;
+    z-index: 10;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00fff0;
+    text-transform: uppercase;
+}
+
+header .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00fff0;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header .nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Sekcja z treścią */
+.container {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #00fff0;
+    box-shadow: 0 0 15px rgba(0, 255, 240, 0.5);
+}
+
+.neon-text {
+    color: #00fff0;
+    text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0;
+    font-weight: bold;
+}
+
+/* Sekcja O mnie */
+.about-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 240, 0.3);
+    margin-bottom: 40px;
+}
+
+.about-section p {
+    margin-top: 10px;
+}
+
+.philosophy-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 240, 0.3);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.philosophy-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.philosophy-item {
+    max-width: 250px;
+    text-align: center;
+}
+
+.philosophy-item i {
+    font-size: 40px;
+    color: #00fff0;
+    margin-bottom: 15px;
+}
+
+.music-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 240, 0.3);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.social-media-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Sekcja stopki */
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Responsywność */
+@media screen and (max-width: 768px) {
+    header .nav-links {
+        display: none;
+    }
+
+    header .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #111;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .social-media-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .logo {
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
+
+/* Nawigacja */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00fff0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+/* Menu toggle (ikona hamburgera) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: #00fff0;
+    cursor: pointer;
+}
+
+/* Linki nawigacyjne */
+.navbar .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+/* Efekt hover (neon) */
+.navbar .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #00fff0;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar .nav-links a:hover {
+    color: #00fff0;
+    transform: translateY(-5px);
+}
+
+/* Menu mobilne (hamburger) */
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.open i {
+        transform: rotate(90deg);
+    }
+}
+
+/* Efekt na logo przy przewijaniu */
+.navbar.scrolled .logo {
+    transform: scale(0.9);
+}
