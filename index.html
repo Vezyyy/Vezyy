@@ -15,27 +15,25 @@
 </head>
 
 <body>
-    <!-- Animacja ładowania -->
-    <div id="loading" class="loading-overlay">
-        <div class="loader">
-            <div class="neon-circle"></div>
-        </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <img src="Files/VPanda Logo Remove BG (1).png" alt="Logo" class="VPlogo">
     </div>
 
 
-    <!-- Nawigacja -->
     <div class="navbar">
         <div class="logo">Vezyy</div>
-        <div class="menu-toggle" id="menu-toggle">
-            <i class="fas fa-bars"></i>
+        <div id="menu-toggle" class="menu-toggle">
+            <i class="fas fa-bars"></i> <!-- Ikona hamburgera -->
         </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="#">Strona główna</a></li>
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Usługi</a></li>
+            <li><a href="#">Kontakt</a></li>
         </ul>
     </div>
-
 
     <div class="container">
         <!-- Profil -->
@@ -47,9 +45,87 @@
     <!-- Sekcja O mnie -->
     <div class="about-section" id="about">
         <h3 class="neon-text">About Me</h3>
-        <p>Welcome to my futuristic space! I'm Vezyy — a tech enthusiast, creative mind, and explorer of the digital
-            frontier. Let's build something amazing together.</p>
+        <div class="about-content">
+            <!-- Sekcja o mnie - ogólny opis -->
+            <div class="about-description">
+                <p class="section-header">👀 <strong>A bit about me:</strong></p>
+                <div class="about-list-container">
+                    <div class="about-item">
+                        <i class="fas fa-sun"></i>
+                        <p>✔ Laid-back but energetic – I value naturalness and authenticity. I can get a conversation
+                            going, but I also appreciate moments of silence with good music and a nice vibe.</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-crosshairs"></i>
+                        <p>✔ Interested in weapons – I know a thing or two about various types of firearms, and I’m into
+                            American vibes.</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-users"></i>
+                        <p>✔ No pressure, no pretending – I care about honest relationships where both sides feel
+                            comfortable — that’s what matters most.</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-handshake"></i>
+                        <p>✔ I like helping others – I always try to support and advise people around me. If you need
+                            help, you can count on me.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Sekcja hobby -->
+        <div class="about-hobbies">
+            <p class="section-header">🎮 <strong>Hobbies & Interests:</strong></p>
+            <div class="hobbies-list">
+                <div class="hobby-item">
+                    <i class="fas fa-gamepad"></i> Games & IT – If you’re into this, we’ve already got common
+                    ground!
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-music"></i> Music – I listen to a wide range of genres and am always open to
+                    new playlists.
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-paw"></i> Pandas – They’re cute, and their chill vibe speaks to me.
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-film"></i> Movies & Netflix – I’d gladly watch something with you or recommend
+                    a good movie!
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-futbol"></i> Soccer, Basketball – Sometimes you just gotta move.
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-coffee"></i> Coffee & Beer – Coffee to start the day, beer to end it!
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-teddy-bear"></i> Plushies – Because stuffed animals are always a vibe!
+                </div>
+            </div>
+        </div>
+
+        <!-- Sekcja szybkich informacji -->
+        <div class="quick-info">
+            <p class="section-header">🎮 <strong>Additional Information:</strong></p>
+
+            <div class="quick-info-item">
+                <p><strong>⚡ Quick replies:</strong> Pretty much online 24/7 – Unless I’m sleeping in my napmobile. 😴
+                </p>
+            </div>
+            <div class="quick-info-item">
+                <p><strong>👌 Chill atmosphere:</strong> No pressure, just good conversation.</p>
+            </div>
+            <div class="quick-info-item">
+                <p><strong>☺️ Ask me anything:</strong> I’m open, no secrets here! 😎</p>
+            </div>
+        </div>
+
+
     </div>
+
+
 
     <!-- Sekcja Filozofia Życiowa -->
     <div class="philosophy-section">
@@ -77,9 +153,18 @@
     <div class="music-section" id="music">
         <h3 class="neon-text">My Music</h3>
         <div class="spotify-container">
-            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5N" width="100%" height="380"
-                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://open.spotify.com/playlist/2BmK5g5B4yzknpdRBTrtSj?si=69c9cbd37b5e4693" width="100%"
+                height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
+
+        <p class="music-description">
+            🎶 <strong>Don't ask me about my music taste</strong> - just check what's on the playlist! 🎧<br><br>
+            I don't have specific artists I stick to. If I like a song, I listen to it, no matter the genre or the
+            artist. But if I had to choose between languages, I definitely prefer songs in English. 🇬🇧 However, Polish
+            music also holds a special place in my heart! 🇵🇱 So, to sum it up, I listen to pretty much everything that
+            gets into my ears! 🎵✨<br><br>
+            It's all about the vibe, not the label. 🎶🤘
+        </p>
     </div>
 
     <!-- Sekcja Social Media -->
@@ -116,26 +201,11 @@
         </div>
     </div>
 
+
     <!-- Stopka -->
     <footer class="footer">
         <p>&copy; 2025 Vezyy. All Rights Reserved.</p>
     </footer>
-
-    <!-- Bottom Menu (for larger screens) -->
-    <div class="bottom-menu">
-        <div class="menu-item" onclick="location.href='#about';">
-            <i class="fas fa-user"></i>
-            <span>About</span>
-        </div>
-        <div class="menu-item" onclick="location.href='#projects';">
-            <i class="fas fa-laptop-code"></i>
-            <span>Projects</span>
-        </div>
-        <div class="menu-item" onclick="location.href='#contact';">
-            <i class="fas fa-envelope"></i>
-            <span>Contact</span>
-        </div>
-    </div>
 
     <script src="scripts.js"></script>
 </body>
