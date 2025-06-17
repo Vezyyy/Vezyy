@@ -23,8 +23,17 @@ window.addEventListener("load", function () {
     var animationDuration = 1000; // 1 sekundy (czas trwania animacji logo)
 
     // Ustawienie opóźnienia ukrycia ekranu ładowania
-    setTimeout(function() {
+    setTimeout(function () {
         document.getElementById("loading-screen").style.display = "none";
     }, animationDuration); // Opóźnienie o czas trwania animacji
 });
 
+// AOS
+
+AOS.init({
+    offset: 100, // domyślnie 120 - zmniejsz, żeby animacja startowała szybciej
+    duration: 600,
+    easing: 'ease-in-out',
+    once: false,
+    mirror: true
+});
