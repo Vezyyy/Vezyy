@@ -136,7 +136,7 @@ header .nav-links a:hover::after {
     margin-top: 2em;
     padding: 60px 20px;
     text-align: center;
-    max-width: 900px;
+    max-width: 100%;
 }
 
 .profile-pic {
@@ -152,6 +152,70 @@ header .nav-links a:hover::after {
     color: #00fff0;
     text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0;
     font-weight: bold;
+}
+
+.mini-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: rgba(0, 80, 80, 0.7);
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 255, 240, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Sekcja Info Pod Zdjeciem */
+
+.info-item i {
+    font-size: 22px;
+    color: #00fff0;
+}
+
+.info-item span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #e0f7f7;
+}
+
+.info-item:hover {
+    background: rgba(0, 255, 240, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px #00fff0;
+}
+
+@media (max-width: 600px) {
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;            /* trochę mniejszy odstęp */
+    padding: 7px 10px;   /* lekko mniejszy padding */
+    margin: 6px 0;       /* lekki margines */
+    border-radius: 7px;  /* ładne zaokrąglenie */
+    background: rgba(0, 255, 240, 0.1);
+    transition: 0.3s ease;
+  }
+
+  .info-item i {
+    font-size: 15px;     /* lekko mniejsza ikona */
+  }
+
+  .info-item span {
+    font-size: 14px;     /* lekko mniejszy tekst */
+  }
+
+  .info-item:hover {
+    background: rgba(0, 255, 240, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 0 10px #00fff0;
+  }
 }
 
 /* Sekcja O mnie */
@@ -207,6 +271,9 @@ header .nav-links a:hover::after {
     font-size: 36px;
     color: #00fff0;
     margin-bottom: 40px;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-underline-offset: 0.3em;
 }
 
 /* Siatka z kartami */
@@ -224,6 +291,7 @@ header .nav-links a:hover::after {
     box-shadow: 0 0 30px rgba(0, 255, 240, 0.2);
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1em;
 }
 
 .about-card:hover {
