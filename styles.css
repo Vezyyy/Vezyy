@@ -202,13 +202,6 @@ header .nav-links a:hover::after {
     margin-top: 15px;
 }
 
-/* Ogólna struktura */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
 .section-title {
     text-align: center;
     font-size: 36px;
