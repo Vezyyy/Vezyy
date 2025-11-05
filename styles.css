@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #0f0f0f;
@@ -18,37 +22,27 @@ body {
 /* Styl dla całego paska przewijania */
 ::-webkit-scrollbar {
     width: 12px;
-    /* szerokość paska przewijania */
     height: 12px;
-    /* wysokość paska przewijania w przypadku poziomego scrolla */
 }
 
 /* Styl dla uchwytu paska przewijania (część, którą przeciągamy) */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, #00fff0, #0077ff);
-    /* gradient odcieni niebieskiego i turkusu */
     border-radius: 10px;
-    /* zaokrąglone rogi uchwytu */
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-    /* świecący efekt */
     transition: background 0.3s ease-in-out;
-    /* płynna zmiana koloru */
 }
 
 /* Styl dla ścieżki paska przewijania (tła paska przewijania) */
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.3);
-    /* ciemne tło dla ścieżki */
     border-radius: 10px;
-    /* zaokrąglone rogi ścieżki */
 }
 
 /* Efekt po najechaniu na uchwyt paska przewijania */
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #00fff0, #00ffcc);
-    /* jaśniejszy gradient */
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
-    /* intensywniejszy efekt świetlny */
 }
 
 
@@ -195,20 +189,20 @@ header .nav-links a:hover::after {
   .info-item {
     display: flex;
     align-items: center;
-    gap: 6px;            /* trochę mniejszy odstęp */
-    padding: 7px 10px;   /* lekko mniejszy padding */
-    margin: 6px 0;       /* lekki margines */
-    border-radius: 7px;  /* ładne zaokrąglenie */
+    gap: 6px;
+    padding: 7px 10px;
+    margin: 6px 0;
+    border-radius: 7px;
     background: rgba(0, 255, 240, 0.1);
     transition: 0.3s ease;
   }
 
   .info-item i {
-    font-size: 15px;     /* lekko mniejsza ikona */
+    font-size: 15px; 
   }
 
   .info-item span {
-    font-size: 14px;     /* lekko mniejszy tekst */
+    font-size: 14px;
   }
 
   .info-item:hover {
@@ -390,22 +384,17 @@ header .nav-links a:hover::after {
 /* Sekcja filozofii */
 .philosophy-section {
     background: rgba(255, 255, 255, 0.1);
-    /* Subtelne tło */
     padding: 50px 20px;
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(0, 255, 240, 0.5);
-    /* Neonowy cień */
     margin-bottom: 50px;
     text-align: center;
     transition: all 0.3s ease;
-    /* Łagodna animacja przejścia */
 }
 
 .philosophy-section:hover {
     transform: translateY(-10px);
-    /* Lekka animacja przy najechaniu */
     box-shadow: 0 0 35px rgba(0, 255, 240, 0.7);
-    /* Silniejszy cień */
 }
 
 /* Lista przedmiotów filozoficznych */
@@ -414,23 +403,19 @@ header .nav-links a:hover::after {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    /* Umożliwia zawijanie na mniejszych ekranach */
     margin-top: 30px;
 }
 
 /* Pojedynczy przedmiot */
 .philosophy-item {
     max-width: 280px;
-    /* Większy obszar dla elementów */
     text-align: center;
     transition: all 0.3s ease;
-    /* Animacja przy najechaniu */
     margin: 15px 0;
 }
 
 .philosophy-item:hover {
     transform: translateY(-10px);
-    /* Lekka animacja podniesienia */
 }
 
 /* Ikony filozoficzne */
@@ -439,49 +424,40 @@ header .nav-links a:hover::after {
     color: #00fff0;
     margin-bottom: 20px;
     transition: transform 0.3s ease, color 0.3s ease;
-    /* Animacja przy najechaniu */
 }
 
 /* Efekt na ikonach przy najechaniu */
 .philosophy-item:hover i {
     transform: rotate(15deg);
-    /* Obrót ikony */
     color: #ff00ff;
-    /* Zmiana koloru na różowy */
 }
 
 /* Responsywność */
 @media screen and (max-width: 768px) {
     .philosophy-list {
         gap: 20px;
-        /* Mniejsza odległość między elementami */
     }
 
     .philosophy-item {
         max-width: 220px;
-        /* Mniejsze elementy na mniejszych ekranach */
     }
 
     .philosophy-item i {
         font-size: 40px;
-        /* Mniejsze ikony na mniejszych ekranach */
     }
 }
 
 @media screen and (max-width: 480px) {
     .philosophy-list {
         gap: 15px;
-        /* Jeszcze mniejsza odległość między elementami */
     }
 
     .philosophy-item {
         max-width: 200px;
-        /* Jeszcze mniejsze elementy na bardzo małych ekranach */
     }
 
     .philosophy-item i {
         font-size: 35px;
-        /* Mniejsze ikony */
     }
 }
 
@@ -522,11 +498,9 @@ header .nav-links a:hover::after {
 
 .tool-item img {
     width: 70px;
-    /* równa wielkość ikon */
     height: 70px;
     object-fit: contain;
     filter: none;
-    /* usuwa wszelkie efekty */
 }
 
 .tool-item span {
@@ -846,7 +820,6 @@ header .nav-links a:hover::after {
     max-width: 100%;
     padding: 0 20px;
     margin: 0 auto;
-    /* Domyślny układ (na większych ekranach) */
 }
 
 /* Pojedyncza ikona */
@@ -922,9 +895,7 @@ header .nav-links a:hover::after {
     .social-media-icons {
         display: grid;
         grid-template-columns: repeat(3, 70px);
-        /* 3 kolumny */
         grid-template-rows: repeat(3, 70px);
-        /* 3 wiersze */
         gap: 15px;
         justify-content: center;
     }
@@ -944,7 +915,6 @@ header .nav-links a:hover::after {
 @media screen and (max-width: 480px) {
     .social-media-icons {
         grid-template-columns: repeat(3, 50px);
-        /* Mniejsze ikony w 3 kolumnach */
         gap: 10px;
     }
 
@@ -1111,10 +1081,8 @@ footer {
         align-items: center;
         gap: 20px;
         transform: translateX(-100%);
-        /* Menu ukryte na początku */
         transition: transform 0.3s ease-in-out;
         padding-top: 100px;
-        /* Dodanie przestrzeni pod logo */
     }
 
     .navbar .nav-links.active {
@@ -1140,7 +1108,6 @@ footer {
         transform: translateX(-50%);
         font-size: 28px;
         z-index: 1001;
-        /* Logo nad menu */
     }
 }
 
@@ -1163,7 +1130,6 @@ footer {
     align-items: center;
     flex-direction: column;
     z-index: 9999;
-    /* Ustawia loading screen na górze */
 }
 
 /* Logo i animacja wokół logo */
@@ -1182,24 +1148,19 @@ footer {
     width: 100%;
     height: 100%;
     background-color: black;
-    /* Czarny background */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    /* Ustawia loading screen na górze */
 }
 
 /* Logo */
 .VPlogo {
     width: 200px;
-    /* Zwiększenie rozmiaru logo */
     height: auto;
     animation: neon-blink 2s ease-in-out infinite;
-    /* Ulepszona animacja - dłuższy czas */
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    /* Płynne przejście przy najechaniu */
 }
 
 /* Animacja migotania i neonowego efektu */
@@ -1208,20 +1169,17 @@ footer {
         opacity: 0.6;
         text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0;
         transform: scale(1);
-        /* Początkowy stan logo */
     }
 
     50% {
         opacity: 1;
         text-shadow: 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0, 0 0 50px #00fff0;
         transform: scale(1.1);
-        /* Powiększenie logo w połowie animacji */
     }
 
     100% {
         opacity: 0.6;
         text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0;
         transform: scale(1);
-        /* Powrót do pierwotnego rozmiaru */
     }
 }
