@@ -19,13 +19,14 @@ body {
     scrollbar-color: #00fff0 #111;
 }
 
-/* Styl dla całego paska przewijania */
+/* #################################################################################### */
+
+/* Pasek Przewijania */
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
 }
 
-/* Styl dla uchwytu paska przewijania (część, którą przeciągamy) */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, #00fff0, #0077ff);
     border-radius: 10px;
@@ -33,20 +34,17 @@ body {
     transition: background 0.3s ease-in-out;
 }
 
-/* Styl dla ścieżki paska przewijania (tła paska przewijania) */
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 
-/* Efekt po najechaniu na uchwyt paska przewijania */
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #00fff0, #00ffcc);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
 }
 
 
-/* Glow efekt na tle */
 @keyframes glow {
     0% {
         box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0;
@@ -60,6 +58,8 @@ body {
         box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0;
     }
 }
+
+/* #################################################################################### */
 
 /* Po załadowaniu strony */
 body.loaded #loading {
@@ -77,6 +77,8 @@ body.loaded #loading {
         transform: rotate(360deg);
     }
 }
+
+/* #################################################################################### */
 
 /* Nagłówek */
 header {
@@ -124,6 +126,8 @@ header .nav-links a:hover::after {
     left: 0;
 }
 
+/* #################################################################################### */
+
 /* Sekcja z treścią */
 .container {
     margin: auto;
@@ -166,8 +170,9 @@ header .nav-links a:hover::after {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Sekcja Info Pod Zdjeciem */
+/* #################################################################################### */
 
+/* Sekcja Info Pod Zdjeciem */
 .info-item i {
     font-size: 22px;
     color: #00fff0;
@@ -248,6 +253,8 @@ header .nav-links a:hover::after {
     animation: fadeIn 1s ease-in-out;
 }
 
+/* #################################################################################### */
+
 /* Wprowadzenie */
 .intro {
     font-size: 20px;
@@ -270,14 +277,12 @@ header .nav-links a:hover::after {
     text-underline-offset: 0.3em;
 }
 
-/* Siatka z kartami */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
-/* Karta informacji */
 .about-card {
     background: rgba(0, 50, 50, 0.5);
     border-radius: 20px;
@@ -293,7 +298,6 @@ header .nav-links a:hover::after {
     box-shadow: 0 0 40px rgba(0, 255, 240, 0.4);
 }
 
-/* Tytuł karty */
 .card-title {
     font-size: 24px;
     color: #00fff0;
@@ -301,7 +305,6 @@ header .nav-links a:hover::after {
     text-align: center;
 }
 
-/* Lista informacji */
 .card-list {
     list-style: none;
     padding: 0;
@@ -326,13 +329,11 @@ header .nav-links a:hover::after {
     background: rgba(0, 255, 240, 0.2);
 }
 
-/* Ikony */
 .card-list i {
     font-size: 22px;
     color: #00fff0;
 }
 
-/* Responsywność */
 @media screen and (max-width: 600px) {
     .section-title {
         font-size: 28px;
@@ -346,6 +347,8 @@ header .nav-links a:hover::after {
         font-size: 15px;
     }
 }
+
+/* #################################################################################### */
 
 /* Sekcja nagłówków */
 .section-header {
@@ -369,7 +372,6 @@ header .nav-links a:hover::after {
     box-shadow: 0 6px 20px rgba(0, 255, 240, 0.7);
 }
 
-/* Animacja Fade In */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -380,6 +382,7 @@ header .nav-links a:hover::after {
     }
 }
 
+/* #################################################################################### */
 
 /* Sekcja filozofii */
 .philosophy-section {
@@ -397,7 +400,6 @@ header .nav-links a:hover::after {
     box-shadow: 0 0 35px rgba(0, 255, 240, 0.7);
 }
 
-/* Lista przedmiotów filozoficznych */
 .philosophy-list {
     display: flex;
     justify-content: center;
@@ -406,7 +408,6 @@ header .nav-links a:hover::after {
     margin-top: 30px;
 }
 
-/* Pojedynczy przedmiot */
 .philosophy-item {
     max-width: 280px;
     text-align: center;
@@ -418,7 +419,6 @@ header .nav-links a:hover::after {
     transform: translateY(-10px);
 }
 
-/* Ikony filozoficzne */
 .philosophy-item i {
     font-size: 50px;
     color: #00fff0;
@@ -426,13 +426,11 @@ header .nav-links a:hover::after {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Efekt na ikonach przy najechaniu */
 .philosophy-item:hover i {
     transform: rotate(15deg);
     color: #ff00ff;
 }
 
-/* Responsywność */
 @media screen and (max-width: 768px) {
     .philosophy-list {
         gap: 20px;
@@ -461,6 +459,7 @@ header .nav-links a:hover::after {
     }
 }
 
+/* #################################################################################### */
 
 /* SEKCJA SKILLS */
 
@@ -479,7 +478,6 @@ header .nav-links a:hover::after {
         0 0 30px #00fff0;
 }
 
-/* Highlighted Tools Grid - minimalistyczne */
 .highlighted-tools {
     display: flex;
     justify-content: center;
@@ -514,6 +512,8 @@ header .nav-links a:hover::after {
 .tool-item:hover {
     transform: scale(1.1);
 }
+
+/* #################################################################################### */
 
 /* Other Skills List */
 .other-skills {
@@ -561,7 +561,6 @@ header .nav-links a:hover::after {
     margin: 0;
 }
 
-/* Responsywność */
 @media (max-width: 700px) {
     .highlighted-tools {
         gap: 30px;
@@ -641,7 +640,6 @@ header .nav-links a:hover::after {
     animation-fill-mode: forwards;
 }
 
-/* Fade + slide appear - delay będzie dodany inline z JS */
 @keyframes fadeSlideInLeft {
     0% {
         opacity: 0;
@@ -666,7 +664,6 @@ header .nav-links a:hover::after {
     }
 }
 
-/* Ikona i jej glow na hover */
 .skill-node i {
     font-size: 36px;
     color: #00fff0;
@@ -692,7 +689,6 @@ header .nav-links a:hover::after {
     }
 }
 
-/* Hover całego boxa */
 .skill-node:hover {
     background-color: rgba(0, 255, 240, 0.8);
     box-shadow: 0 0 30px #00fff0;
@@ -700,7 +696,6 @@ header .nav-links a:hover::after {
     z-index: 2;
 }
 
-/* Linie łączące z osią centralną */
 .skill-node.left::before,
 .skill-node.right::before {
     content: '';
@@ -763,7 +758,6 @@ header .nav-links a:hover::after {
     animation-timing-function: ease;
 }
 
-/* Responsywność */
 @media (max-width: 768px) {
     .skills-tree::before {
         left: 8px;
@@ -802,7 +796,6 @@ header .nav-links a:hover::after {
     box-shadow: 0 0 30px rgba(0, 255, 240, 0.3);
 }
 
-/* Nagłówek sekcji */
 .social-media-section h3 {
     font-size: 30px;
     color: #00fff0;
@@ -811,7 +804,6 @@ header .nav-links a:hover::after {
     letter-spacing: 2px;
 }
 
-/* Ikony Social Media */
 .social-media-icons {
     display: flex;
     justify-content: center;
@@ -822,7 +814,6 @@ header .nav-links a:hover::after {
     margin: 0 auto;
 }
 
-/* Pojedyncza ikona */
 .social-icon {
     display: flex;
     justify-content: center;
@@ -890,7 +881,6 @@ header .nav-links a:hover::after {
     color: #1db954;
 }
 
-/* Responsywność - Dostosowanie do urządzeń mobilnych */
 @media screen and (max-width: 768px) {
     .social-media-icons {
         display: grid;
@@ -941,7 +931,6 @@ footer {
     text-transform: uppercase;
 }
 
-/* Responsywność */
 @media screen and (max-width: 768px) {
     header .nav-links {
         display: none;
@@ -990,6 +979,8 @@ footer {
     }
 }
 
+/* #################################################################################### */
+
 /* Nawigacja */
 .navbar {
     position: fixed;
@@ -1015,7 +1006,7 @@ footer {
     transition: transform 0.3s ease;
 }
 
-/* Menu toggle (ikona hamburgera) */
+/* Menu toggle */
 .menu-toggle {
     display: none;
     font-size: 30px;
@@ -1043,7 +1034,6 @@ footer {
     transition: color 0.3s, transform 0.3s ease;
 }
 
-/* Efekt hover (neon) */
 .navbar .nav-links a::after {
     content: '';
     position: absolute;
@@ -1067,7 +1057,7 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Menu mobilne (hamburger) */
+/* Menu mobilne hamburger */
 @media screen and (max-width: 768px) {
     .navbar .nav-links {
         position: fixed;
@@ -1093,13 +1083,11 @@ footer {
         display: block;
     }
 
-    /* Animacja ikony hamburgera (po kliknięciu zmienia się w 'X') */
     .menu-toggle.open i {
         transform: rotate(90deg);
         transition: transform 0.3s ease;
     }
 
-    /* Logo nad linkami */
     .navbar .logo {
         position: absolute;
         top: 20px;
@@ -1110,12 +1098,10 @@ footer {
     }
 }
 
-/* Efekt na logo przy przewijaniu */
 .navbar.scrolled .logo {
     transform: scale(0.9);
 }
 
-/* Tło ekranu ładowania */
 #loading-screen {
     position: fixed;
     top: 0;
@@ -1130,13 +1116,14 @@ footer {
     z-index: 9999;
 }
 
-/* Logo i animacja wokół logo */
 .logo-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* #################################################################################### */
 
 /* Tło ekranu ładowania */
 #loading-screen {
@@ -1152,7 +1139,6 @@ footer {
     z-index: 9999;
 }
 
-/* Logo */
 .VPlogo {
     width: 200px;
     height: auto;
@@ -1161,7 +1147,6 @@ footer {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Animacja migotania i neonowego efektu */
 @keyframes neon-blink {
     0% {
         opacity: 0.6;
