@@ -5,33 +5,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Toggle menu (otwieranie/zamykanie)
     menuToggle.addEventListener('click', function () {
-        navLinks.classList.toggle('active'); // Dodanie/zdjęcie klasy 'active' do menu
-        menuToggle.classList.toggle('open'); // Zmiana wyglądu hamburgera
+        navLinks.classList.toggle('active'); 
+        menuToggle.classList.toggle('open'); 
     });
 
     // Zamknięcie menu po kliknięciu na link
     navLinksItems.forEach(item => {
         item.addEventListener('click', function () {
-            navLinks.classList.remove('active'); // Zamyka menu po kliknięciu
-            menuToggle.classList.remove('open'); // Zmienia ikonę z powrotem na hamburgera
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('open');
         });
     });
 });
 
 window.addEventListener("load", function () {
-    // Czas trwania animacji (w milisekundach)
-    var animationDuration = 1000; // 1 sekundy (czas trwania animacji logo)
+    var animationDuration = 1000; 
 
     // Ustawienie opóźnienia ukrycia ekranu ładowania
     setTimeout(function () {
         document.getElementById("loading-screen").style.display = "none";
-    }, animationDuration); // Opóźnienie o czas trwania animacji
+    }, animationDuration);
 });
 
 // AOS
 
 AOS.init({
-    offset: 100, // domyślnie 120 - zmniejsz, żeby animacja startowała szybciej
+    offset: 100, 
     duration: 600,
     easing: 'ease-in-out',
     once: false,
